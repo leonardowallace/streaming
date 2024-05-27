@@ -1,0 +1,272 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+/*=============== Variaveis CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: hsl(0, 0%, 100%);
+  --white-color-light: hsl(0, 0%, 90%);
+  --shadow-bg: linear-gradient(180deg,
+             hsla(0, 0%, 0%, 0) 60%,
+             hsla(0, 0%, 0%, .7) 78%);
+
+  /*========== Fontes ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --big-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsividade das Fontes ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  color: var(--white-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== LAYOUT ===============*/
+.main {
+  display: grid;
+  row-gap: 1.5rem;
+  margin-inline: 1.5rem;
+  padding-block: 8.5rem 4rem;
+}
+
+.bg__image,
+.bg__blur{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bg__image{
+  object-fit: cover;
+  object-position: center;
+}
+
+.bg__blur{
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/*=============== HEADER ===============*/
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  display: grid;
+  row-gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  z-index: var(--z-fixed);
+}
+
+.header__content,
+.header__actions,
+.header__search{
+  display: flex;
+}
+
+.header__content{
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo{
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+}
+
+.header__actions{
+  column-gap: .75rem;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.header__actions i,
+.header__menu{
+  cursor: pointer;
+}
+
+.header__search{
+  align-items: center;
+  column-gap: .5rem;
+  background-color: hsla(0, 0%, 100%,  .15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding-inline: 1rem;
+  border-radius: .75rem;
+}
+
+.header__search i{
+  font-size: 1.25rem;
+}
+
+.header__input{
+  width: 100%;
+  background-color: transparent;
+  padding-block: 1rem;
+  color: var(--white-color);
+}
+
+.header__input::placeholder{
+  color: var(--white-color);
+}
+
+/* Add blur header */
+
+
+/*=============== NAV ===============*/
+.nav{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: hsla(0, 0%, 0%, .2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  width: 285px;
+  height: 100%;
+  padding: 3rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: var(--z-fixed);
+  transition: right .4s;
+}
+
+.nav__logo{
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.nav__logo,
+.nav__list{
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--white-color);
+}
+
+.nav__menu,
+.nav__list{
+  display: grid;
+  row-gap: 2rem;
+}
+
+.nav__link{
+  color: var(--white-color);
+  display: inline-flex;
+  align-items: center;
+  column-gap: .75rem;
+}
+
+.nav__link i{
+  font-size: 1.5rem;
+}
+
+.nav__title{
+  font-size: var(--normal-font-size);
+  margin-bottom: .75rem;
+}
+
+.nav__close{
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Show menu */
+
+
+/*=============== BANNER ===============*/
+
+
+/*=============== CARDS ===============*/
+
+
+/*=============== MOVIES ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== NEW ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
