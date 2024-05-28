@@ -239,26 +239,147 @@ img {
 }
 
 /* Show menu */
-
+.show-menu{
+  right: 0;
+}
 
 /*=============== BANNER ===============*/
+.banner__link{
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: var(--white-color);
+}
 
+.banner__img{
+  border-radius: 1rem;
+}
+
+.banner__shadow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--shadow-bg);
+  border-radius: 1rem;
+}
+
+.banner__data{
+  position: absolute;
+  bottom: 1.5rem;
+  text-align: center;
+}
+
+.bannet__title{
+  font-size: var(--big-font-size);
+}
 
 /*=============== CARDS ===============*/
+.card__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: .75rem;
+}
 
+.card__article{
+  width: 152px;
+}
 
-/*=============== MOVIES ===============*/
+.card__link{
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: var(--white-color);
+}
 
+.card__img{
+  border-radius: 1rem;
+}
+
+.card__shadow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:var(--shadow-bg);
+  border-radius: 1rem;
+}
+
+.card__data{
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  padding-inline: .75rem ;
+}
+
+.card__name{
+  font-size: var(--normal-font-size);
+}
+
+.card__category{
+  font-size: small;
+}
+
+.card__like{
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/*=============== FILMES ===============*/
+.movie{
+  display: grid;
+}
 
 /* Swiper class */
+.swiper{
+  margin-inline: initial;
+}
 
+/*=============== NOVIDADES ===============*/
+.new{
+  position: relative;
+  display: grid;
+}
 
-/*=============== NEW ===============*/
+.new__card{
+  scale: .8;
+  transition: scale .4s;
+}
 
+.new__data{
+  opacity: 0;
+  transition: opacity .4s;
+}
 
 /* Swiper class */
+.swiper-slide-active .new__data{
+  opacity: 1;
+}
 
+.new .swiper-slide-active,
+.new .swiper-slide-duplicate-active{
+  scale: 1;
+}
 
+.new .swiper-pagination-bullets{
+  bottom: -2.5rem;
+}
+
+.new .swiper-pagination-bullet{
+  width: 1.5rem;
+  height: 0.25rem;
+  border-radius: 1rem;
+  background-color: var(--white-color);
+  transition: background-color .3s, opacity .3s;
+}
+
+.new .swiper-pagination-bullet-active{
+  background-color: var(--white-color);
+}
 /*=============== SCROLL BAR ===============*/
 
 
