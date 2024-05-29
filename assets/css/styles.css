@@ -282,7 +282,7 @@ img {
   text-align: center;
 }
 
-.bannet__title{
+.banner__title{
   font-size: var(--big-font-size);
 }
 
@@ -349,6 +349,12 @@ img {
 .swiper{
   margin-inline: initial;
 }
+
+/*===============LIKES===========*/
+.card__like.ri-heart-fill {
+  color: red; /* Cor do ícone preenchido */
+}
+
 
 /*=============== NOVIDADES ===============*/
 .new{

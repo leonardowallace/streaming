@@ -16,6 +16,19 @@ const nav = document.getElementById('nav'),
         })
     }
 
+   /*===================LIKE=================*/
+/*===================LIKE=================*/
+let likedButtons = document.querySelectorAll('.card__like');
+likedButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault(); // Não carrega o link
+        button.classList.toggle('ri-heart-line'); // Classe para ícone vazado
+        button.classList.toggle('ri-heart-fill'); // Classe para ícone preenchido
+    });
+});
+
+
+
 /*=============== SWIPER FILMES ===============*/
 let swiperMovie = new Swiper('.movie__swiper', {
     loop: true,
