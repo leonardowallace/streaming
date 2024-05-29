@@ -16,7 +16,18 @@ const nav = document.getElementById('nav'),
         })
     }
 
-   /*===================LIKE=================*/
+   /*===========REMOVE MENU MOBILE=============*/
+const navLink = document.querySelectorAll('.nav__link');
+
+navLink.forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('show-menu'); // Remover a classe 'show-menu' do elemento de navegação
+    });
+});
+
+
+
+
 /*===================LIKE=================*/
 let likedButtons = document.querySelectorAll('.card__like');
 likedButtons.forEach(button => {
