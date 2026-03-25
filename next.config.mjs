@@ -5,13 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Suprimir erros de build que impedem o deploy
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 };
 
 export default nextConfig;
