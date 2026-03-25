@@ -1,11 +1,11 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "/streaming",
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  basePath: '/streaming',
   images: {
     unoptimized: true,
   },
+  // Suprimir erros de build que impedem o deploy
   typescript: {
     ignoreBuildErrors: true,
   },
